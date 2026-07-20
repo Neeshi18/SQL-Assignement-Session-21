@@ -1,0 +1,28 @@
+Drop table restaurants;
+CREATE TABLE Restaurants (
+    RestaurantID INT PRIMARY KEY,
+    Name VARCHAR(100),
+    Cuisine VARCHAR(50),
+    Rating DECIMAL(2,1)
+);
+
+INSERT INTO Restaurants (RestaurantID, Name, Cuisine, Rating) VALUES
+(1, 'Mainland China', 'Chinese', 4.6),
+(2, 'Barbeque Nation', 'BBQ', 4.8),
+(3, 'Hocco Eatery', 'Gujarati', 4.4),
+(4, 'Udupi Palace', 'South Indian', 4.2),
+(5, 'Dominos Pizza', 'Pizza', 4.1),
+(6, 'Subway', 'Fast Food', 3.8),
+(7, 'McDonalds', 'Fast Food', 3.6),
+(8, 'Biryani Blues', 'Biryani', 4.5),
+(9, 'Sankalp', 'South Indian', 4.7),
+(10, 'Pizza Hut', 'Pizza', 3.9),
+(11, 'KFC', 'Fast Food', 3.7),
+(12, 'Rajdhani', 'Gujarati', 4.3),
+(13, 'Wow Momo', 'Chinese', 3.5),
+(14, 'The Grand Thakar', 'Gujarati', 4.9),
+(15, 'Kake Di Hatti', 'North Indian', 4.0);
+SELECT *
+FROM Restaurants
+WHERE Rating BETWEEN @MinRating
+AND @MaxRating;
